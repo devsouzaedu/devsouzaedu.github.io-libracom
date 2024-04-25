@@ -171,3 +171,30 @@ footer {
     height: auto; /* Altura automática para manter a proporção */
     margin-right: 10px; /* Margem à direita do texto */
 }
+
+/* Estilo para o rodapé */
+/* Estilo para o rodapé */
+footer {
+    color: #fff;
+    padding: 40px 0;
+  }
+  
+  footer h4 {
+    font-size: 18px;
+  }
+  
+  footer p {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .bg-dark {
+    background-color: #000000 !important /* Alterando a cor de fundo para cinza escuro */
+  }
+  
+
+.entregas_title {
+    font-family: "SF_PRO_TEXT";
+    font-size: 30px;
+}
+  

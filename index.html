@@ -223,6 +223,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <!-- JavaScript personalizado -->
 <script src="script.js"></script>
-
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      var video = document.getElementById('video-bg');
+      video.play().then(function () {
+          // Vídeo reproduzido com sucesso
+      }).catch(function (error) {
+          // Tratamento de erro ao reproduzir o vídeo
+          console.log('Erro ao reproduzir o vídeo:', error);
+      });
+  });
+</script>
 </body>
 </html>
