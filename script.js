@@ -88,3 +88,13 @@ $(document).ready(function() {
     return false;
   });
 });
+
+
+const toggleButtons = document.querySelectorAll('.toggle-btn');
+
+toggleButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const answer = button.parentElement.nextElementSibling;
+        answer.classList.toggle('faq-answer-visible');
+    });
+});

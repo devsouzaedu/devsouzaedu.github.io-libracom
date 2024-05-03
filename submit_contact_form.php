@@ -5,7 +5,7 @@ $mensagem = $_POST['message'];
 
 $assunto = 'Contato do Site - ' . $nome_cliente;
 $remetente = 'contato@seusite.com';
-$destinatario = 'dev.souzaedu@gmail.com'; // Substitua pelo seu endereço de e-mail
+$destinatario = 'dev.souzaeduw@gmail.com'; // Substitua pelo seu endereço de e-mail
 $cabecalho = "From: $remetente\r\nContent-type: text/plain; charset=utf-8";
 
 // Verifique se o formulário foi enviado corretamente
