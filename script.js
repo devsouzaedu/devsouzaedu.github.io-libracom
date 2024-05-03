@@ -70,3 +70,21 @@ $(document).ready(function(){
     autoplaySpeed: 5000, // Definir a velocidade da reprodução automática (em milissegundos)
   });
 });
+
+
+// JavaScript para mostrar/esconder o botão flutuante ao rolar a página
+$(document).ready(function() {
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('.floating-button').fadeIn();
+    } else {
+      $('.floating-button').fadeOut();
+    }
+  });
+
+  // Animação suave ao clicar no botão flutuante
+  $('.scroll-to-top').click(function() {
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+  });
+});

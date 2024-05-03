@@ -35,6 +35,7 @@ body {
 /* Estilo para o título do feedback e contato */
 h2 {
     color: black; /* Alterando a cor do texto dos títulos de feedback e contato para preto */
+    margin-top: 30px;
 }
 
 /* Estilo para o rodapé */
@@ -114,24 +115,24 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.801); /* Cor preta com 20% de opacidade */
-  }
-  
-  /* Estilos para o conteúdo sobreposto */
-  .content {
+    background-color: rgba(0, 0, 0, 0.582); /* Cor preta com 20% de opacidade */
+}
+
+/* Estilos para o conteúdo sobreposto */
+.content {
     position: absolute;
     top: 50%; /* Alinhamento vertical ao centro */
     left: 50%; /* Alinhamento horizontal ao centro */
     transform: translate(-50%, -50%); /* Centralização */
     text-align: center;
-  }
-  
-  .content img {
+}
+
+.content img {
     width: 200px; /* Largura da imagem */
     height: auto; /* Altura automática para manter a proporção */
-  }
-  
-  .content button {
+}
+
+.content button {
     padding: 10px 20px; /* Espaçamento interno */
     font-size: 16px; /* Tamanho da fonte */
     background-color: #d3d3d3; /* Cor cinza gelo */
@@ -145,21 +146,62 @@ footer {
     background-color: #b0b0b0; /* Altera a cor ao passar o mouse */
 }
 
-
-  .div1text {
+.div1text {
     font-size: 40px;
     font-family: "SF_PRO_TEXT", sans-serif; /* Adicionando a fonte Epilogue */
     color: #fff;
 }
 
 
+/* Estilo para o rodapé */
+footer {
+    color: #fff;
+    padding: 40px 0;
+}
+
+footer h4 {
+    font-size: 18px;
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.bg-dark {
+    background-color: #000000 !important; /* Alterando a cor de fundo para cinza escuro */
+}
+
+.entregas_title {
+    font-family: "SF_PRO_TEXT";
+    font-size: 30px;
+}
+
+/* Estilo para o contêiner de banners */
+.banner-container {
+    text-align: center; /* Centralizar horizontalmente o conteúdo */
+    margin-top: 30px; /* Espaçamento superior para separar do conteúdo acima */
+}
+
+/* Estilo para os slides de banner */
+.banner-slide {
+    display: inline-block; /* Permitir que os slides sejam alinhados em linha */
+}
+
+/* Estilo para o botão do WhatsApp */
 .whatsapp-button {
-    display: inline-block;
+    position: fixed;
+    bottom: 5vh; /* Distância do fundo: 5% da altura da viewport */
+    right: 5vw; /* Distância da direita: 5% da largura da viewport */
+    z-index: 1000; /* Garante que o botão esteja acima de outros elementos */
+    width: 10vw; /* Largura do botão igual a 10% da largura da viewport */
     background-color: #25D366; /* Cor de fundo do WhatsApp */
     color: #fff; /* Cor do texto */
     text-decoration: none; /* Remover sublinhado do link */
     padding: 10px 20px; /* Espaçamento interno */
     border-radius: 20px; /* Cantos arredondados */
+    display: flex; /* Alterar para flex para centralizar o ícone e o texto */
+    align-items: center; /* Centralizar verticalmente */
 }
 
 .whatsapp-button:hover {
@@ -171,30 +213,3 @@ footer {
     height: auto; /* Altura automática para manter a proporção */
     margin-right: 10px; /* Margem à direita do texto */
 }
-
-/* Estilo para o rodapé */
-/* Estilo para o rodapé */
-footer {
-    color: #fff;
-    padding: 40px 0;
-  }
-  
-  footer h4 {
-    font-size: 18px;
-  }
-  
-  footer p {
-    margin-top: 20px;
-    font-size: 14px;
-  }
-  
-  .bg-dark {
-    background-color: #000000 !important /* Alterando a cor de fundo para cinza escuro */
-  }
-  
-
-.entregas_title {
-    font-family: "SF_PRO_TEXT";
-    font-size: 30px;
-}
-  
