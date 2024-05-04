@@ -16,9 +16,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/akrobat-extrabold-2" rel="stylesheet">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
-    </style>
 </head>
 <body>
 
@@ -81,24 +78,24 @@
 
 
 <!-- Slide de Produtos -->
-<div class="container">
+<div class="container mt-5">
   <p class="entregas_title">Nossas últimas entregas</p>
-  <div class="produto-slider">
-    <div class="card">
-      <img class="card-img-top" src="images\435693982_18018114149273014_4774670794354826942_n.jpg" alt="Produto 1">
+  <div class="produto-slider row">
+    <div class="card col-lg-12 col-md-4">
+      <img class="card-img-top" src="images/435693982_18018114149273014_4774670794354826942_n.jpg" alt="Produto 1">
       <div class="card-body">
         <h5 class="card-title">C G Fisio</h5>
         <p class="card-text">Entregamos esses wind-banners para a C G Fisioterapia no ultimo mês</p>
       </div>
     </div>
-    <div class="card">
-      <img class="card-img-top" src="images\WINDBANNER_RJ1.jpg" alt="Produto 2">
+    <div class="card col-lg-12 col-md-4 d-none d-lg-block">
+      <img class="card-img-top" src="images/WINDBANNER_RJ1.jpg" alt="Produto 2">
       <div class="card-body">
         <h5 class="card-title">Auto-Posto Barão de Paulo</h5>
         <p class="card-text">Esses Wind-banners foram entregues para ajudar o Auto-posto a vender mais!</p>
       </div>
     </div>
-    <div class="card">
+    <div class="card col-lg-12 col-md-4 d-none d-lg-block">
       <img class="card-img-top" src="images/Wind-Banner-20200409062617.1276780015.jpg" alt="Produto 3">
       <div class="card-body">
         <h5 class="card-title">Raiane Cristina</h5>
@@ -108,9 +105,13 @@
     <!-- Adicione mais itens conforme necessário -->
   </div>
   <!-- Botões de controle do slide -->
-  <button class="slick-prev slick-arrow" aria-label="Previous" type="button">Anterior</button>
-  <button class="slick-next slick-arrow" aria-label="Next" type="button">Próximo</button>
+  <div class="d-none d-lg-block">
+    <button class="slick-prev slick-arrow" aria-label="Previous" type="button">Anterior</button>
+    <button class="slick-next slick-arrow" aria-label="Next" type="button">Próximo</button>
+  </div>
 </div>
+
+
 
 <!-- Botão flutuante do WhatsApp -->
 <a href="https://wa.me/message/VUZ2JEYFR6G2O1" target="_blank" class="whatsapp-button">
@@ -121,11 +122,11 @@
 <!-- Feedback -->
 <div class="row">
   <div class="col-lg-12">
-    <h2>Feedback dos Clientes</h2>
+    <h2 class="title_feedback">Feedback dos Clientes</h2>
     <div id="feedback-slider" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="\images\WhatsApp Image 2024-04-22 at 15.37.50.jpeg" class="rounded-circle d-block mx-auto" alt="Feedback 1">
+          <img src="\images\WhatsApp Image 2024-04-22 at 15.37.50.jpeg" class="rounded-circle d-block mx-auto img-fluid" style="max-width: 30%; width: auto; height: auto;" alt="Feedback 1">
           <div class="stars">
             <span class="star">&#9733;</span>
             <span class="star">&#9733;</span>
@@ -135,13 +136,13 @@
           </div>
           <p class="feedback-text">Alta qualidade do material dos Wind-banners e excelente e o atendimento também. Entrega no prazo e até avisaram que estavam indo entregar! Fiquei surpresa!</p>
           <div class="profile">
-            <img src="images\feedback_pfp_user.jpg" class="rounded-circle" alt="Perfil 1">
+            <img src="images\feedback_pfp_user.jpg" class="rounded-circle img-fluid" alt="Perfil 1">
             <span>Ovos Dias</span>
           </div>
         </div>
         <!-- Feedback duplicado com nome Carol Borguezan -->
         <div class="carousel-item">
-          <img src="images/WIND_BANNER_PENA_FINA_11.jpg" class="rounded-circle d-block mx-auto" alt="Feedback 2">
+          <img src="images/WIND_BANNER_PENA_FINA_11.jpg" class="rounded-circle d-block mx-auto img-fluid" style="max-width: 30%; width: auto; height: auto;" alt="Feedback 2">
           <div class="stars">
             <span class="star">&#9733;</span>
             <span class="star">&#9733;</span>
@@ -151,13 +152,13 @@
           </div>
           <p class="feedback-text">Meu salão de unhas vendeu 300% a mais depois de posicionar um wind-banner na porta! a entrega da Libracom é super rápida e pratica</p>
           <div class="profile">
-            <img src="images/opera_gJm0ooBARb.png" class="rounded-circle" alt="Perfil 2">
+            <img src="images/opera_gJm0ooBARb.png" class="rounded-circle img-fluid" alt="Perfil 2">
             <span>Mariana Nails</span>
           </div>
         </div>
         <!-- Feedback duplicado com nome FBK Frutas -->
         <div class="carousel-item">
-          <img src="images/opera_WLTEr94Qyl.png" class="rounded-circle d-block mx-auto" alt="Feedback 3">
+          <img src="images/opera_WLTEr94Qyl.png" class="rounded-circle d-block mx-auto img-fluid" style="max-width: 30%; width: auto; height: auto;" alt="Feedback 3">
           <div class="stars">
             <span class="star">&#9733;</span>
             <span class="star">&#9733;</span>
@@ -167,8 +168,24 @@
           </div>
           <p class="feedback-text">Tinhamos que fazer a Maratona de alphaville e contratamos uma empresa do centro de São Paulo para fabricar, mas houve um transtorno e eles falharam na entrega, porem a LibraCom me salvou e entregou 30 unidas em apenas 3 dias, grato ao Eduardo e Mariana!</p>
           <div class="profile">
-            <img src="images/1549935195427.jpg" class="rounded-circle" alt="Perfil 3">
+            <img src="images/1549935195427.jpg" class="rounded-circle img-fluid" alt="Perfil 3">
             <span>Rafael Maresias </span>
+          </div>
+        </div>
+        <!-- Feedback duplicado -->
+        <div class="carousel-item">
+          <img src="images/opera_WLTEr94Qyl.png" class="rounded-circle d-block mx-auto img-fluid" style="max-width: 30%; width: auto; height: auto;" alt="Feedback 4">
+          <div class="stars">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+          <p class="feedback-text">Outro feedback incrível! Adoramos a experiência com a LibraCom. Entrega rápida e qualidade impecável. Recomendamos a todos!</p>
+          <div class="profile">
+            <img src="images/profile_picture.jpg" class="rounded-circle img-fluid" alt="Perfil 4">
+            <span>João da Silva</span>
           </div>
         </div>
         <!-- Adicione mais carousel-items conforme necessário -->
@@ -185,30 +202,32 @@
   </div>
 </div>
 
+
+
+
 <!-- Contato -->
 <div class="row mt-5">
   <div class="col-lg-12">
-    <h2>Entre em Contato</h2>
-    <!-- Aqui você pode adicionar o formulário de contato -->
+    <h2 class="contact-title">Entre em Contato</h2>
+    <div class="contact-form-container">
+      <form id="contact-form" action="submit_contact_form.php" method="post">
+        <div class="form-group">
+          <label for="name">Nome do Cliente:</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="company">Nome da Empresa:</label>
+          <input type="text" class="form-control" id="company" name="company" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Mensagem:</label>
+          <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
   </div>
 </div>
-
-<!-- Inserir este código dentro do conteúdo do seu div "Contato" -->
-<form id="contact-form" action="submit_contact_form.php" method="post">
-  <div class="form-group">
-    <label for="name">Nome do Cliente:</label>
-    <input type="text" class="form-control" id="name" name="name" required>
-  </div>
-  <div class="form-group">
-    <label for="company">Nome da Empresa:</label>
-    <input type="text" class="form-control" id="company" name="company" required>
-  </div>
-  <div class="form-group">
-    <label for="message">Mensagem:</label>
-    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-  </div>
-  <button type="submit" class="btn btn-primary">Enviar</button>
-</form>
 
 <!-- Botao flutuante do whatsapp, o outro -->
 
@@ -284,13 +303,13 @@
 
   <div class="image-gallery">
       <div class="gallery-item">
-          <img src="/images/foto_galeria_1.jpg" alt="Imagem 1">
+          <img src="/images/foto_galeria_1.png" alt="Imagem 1">
       </div>
       <div class="gallery-item">
-          <img src="/images/foto_galeria_2.jpg" alt="Imagem 2">
+          <img src="/images/foto_galeria_2.png" alt="Imagem 2">
       </div>
       <div class="gallery-item">
-          <img src="/images/foto_galeria_3.jpg" alt="Imagem 3">
+          <img src="/images/foto_galeria_3.png" alt="Imagem 3">
       </div>
       <!-- Adicione mais imagens aqui -->
   </div>

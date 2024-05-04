@@ -1,15 +1,16 @@
-/* Estilos gerais */
-
-body {
-    font-family: 'Epilogue', sans-serif,'Akrobat ExtraBold';
-    padding-top: 30px; /* Para compensar a altura do menu fixo */
-    margin: 0; /* Remover margens padrão */
-}
-
+/* Fontes */
 @font-face {
     font-family: SF_PRO_TEXT;
     src: url('fonts/SF-Pro-Text-Bold.otf');
 }
+
+/* Estilos gerais */
+body {
+    font-family: 'Epilogue', sans-serif, 'Akrobat ExtraBold';
+    padding-top: 30px; /* Para compensar a altura do menu fixo */
+    margin: 0; /* Remover margens padrão */
+}
+
 .navbar {
     background-color: #1e1c1c !important; /* Nova cor de fundo */
     transition: top 0.3s; /* Transição suave para o menu fixo */
@@ -17,6 +18,20 @@ body {
 
 .container-fluid {
     padding: 20px;
+}
+
+.entregas_title {
+    color: #ffffff;
+    background-color: rgb(49, 49, 49);
+    font-family: "SF_PRO_TEXT";
+    font-size: 30px;
+}
+
+.card-img-top,
+.card-body,
+.card-title,
+.card-text {
+    background-color: #0c0c0c; /* Fundo cinza */
 }
 
 /* Estilo para o cabeçalho com imagem de fundo */
@@ -107,7 +122,6 @@ footer {
     object-fit: cover; /* Garantindo que o vídeo cubra todo o espaço */
 }
 
-
 /* Estilos para a overlay escura */
 .overlay {
     position: absolute;
@@ -152,7 +166,6 @@ footer {
     color: #fff;
 }
 
-
 /* Estilo para o rodapé */
 footer {
     color: #fff;
@@ -172,12 +185,81 @@ footer p {
     background-color: #000000 !important; /* Alterando a cor de fundo para cinza escuro */
 }
 
-.entregas_title {
-    font-family: "SF_PRO_TEXT";
-    font-size: 30px;
+/* Estilos para a seção de perguntas e respostas */
+.faq-container {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-/* Estilo para o contêiner de banners */
+.faq-item {
+    margin-bottom: 20px; /* Espaçamento entre as perguntas e respostas */
+    border-radius: 10px; /* Cantos arredondados */
+    overflow: hidden; /* Garante que o conteúdo dentro das perguntas e respostas não ultrapasse os cantos arredondados */
+    border: 1px solid #ccc; /* Adiciona uma borda para destacar as perguntas e respostas */
+}
+
+.faq-question {
+    cursor: pointer;
+    font-weight: bold;
+    font-family: "SF_PRO_TEXT", sans-serif; /* Adicionando a fonte SF_PRO_TEXT */
+}
+
+.faq-answer {
+    display: none;
+    margin-top: 10px;
+    font-family: "SF_PRO_TEXT", sans-serif; /* Adicionando a fonte SF_PRO_TEXT */
+}
+
+.faq-question,
+.faq-answer {
+    padding: 15px; /* Espaçamento interno */
+}
+
+.faq-answer-visible {
+    display: block;
+}
+
+/* Estilos para o formulário de contato */
+.contact-form-container {
+    max-width: 500px; /* Define a largura máxima do formulário */
+    margin: 0 auto; /* Centraliza o formulário horizontalmente */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Cantos arredondados */
+    background-color: #000000; /* Cor de fundo do formulário */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave para efeito de elevação */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Espaçamento entre os campos */
+}
+
+label {
+    font-weight: bold; /* Deixa o texto do label em negrito */
+    color: #fff; /* Cor do texto branca para os labels */
+}
+
+.form-control {
+    background-color: rgb(53, 53, 53); /* Cor de fundo preta para os campos do formulário */
+    color: #fff; /* Cor do texto branca para os campos do formulário */
+    border-radius: 10px; /* Cantos arredondados */
+    border: none; /* Remove a borda */
+}
+
+.btn-primary {
+    width: 100%; /* Botão ocupa 100% da largura do contêiner */
+    border-radius: 10px; /* Cantos arredondados */
+}
+
+.contact-title {
+    background-color: #ffffff;
+    text-align: center; /* Centraliza o texto horizontalmente */
+    margin-bottom: 30px; /* Espaçamento inferior */
+    color: #000000; /* Cor do texto branca para o título */
+    font-family: 'SF_PRO_TEXT', sans-serif; /* Fonte do texto */
+    font-size: 24px; /* Tamanho do texto */
+}
+
+/* Estilos para o contêiner de banners */
 .banner-container {
     text-align: center; /* Centralizar horizontalmente o conteúdo */
     margin-top: 30px; /* Espaçamento superior para separar do conteúdo acima */
@@ -210,30 +292,7 @@ footer p {
     height: auto; /* Altura automática para manter a proporção */
 }
 
-}
-
-/* Estilo para a seção de perguntas e respostas */
-.faq-container {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.faq-question {
-    cursor: pointer;
-    font-weight: bold;
-    font-family: "SF_PRO_TEXT", sans-serif; /* Adicionando a fonte SF_PRO_TEXT */
-}
-
-.faq-answer {
-    display: none;
-    margin-top: 10px;
-    font-family: "SF_PRO_TEXT", sans-serif; /* Adicionando a fonte SF_PRO_TEXT */
-}
-
-.faq-answer-visible {
-    display: block;
-}
-
+/* Estilo para a galeria de imagens */
 .gallery-section {
     text-align: center;
     padding: 50px 20px;
@@ -269,6 +328,7 @@ footer p {
     transform: scale(1.05);
 }
 
+/* Estilos para o botão de solicitar orçamento */
 .request-quote-btn {
     display: block;
     margin: 30px auto;
@@ -286,3 +346,56 @@ footer p {
     background-color: #333;
 }
 
+/* Media queries */
+
+/* Desktop */
+@media (min-width: 992px) {
+    .entregas_title {
+        font-size: 28px;
+    }
+
+    .produto-slider {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .card {
+        flex: 0 0 auto;
+        width: 50%;
+        margin-right: 15px;
+        scroll-snap-align: start;
+    }
+
+    .card:last-child {
+        margin-right: 0;
+    }
+
+    .slick-prev,
+    .slick-next {
+        display: none;
+    }
+
+    .carousel-item {
+        display: flex;
+        justify-content: space-between;
+        width: 50%; /* Renderiza dois itens por vez */
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .produto-slider {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 20px;
+    }
+
+    .produto-slider .card {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+    }
+}
