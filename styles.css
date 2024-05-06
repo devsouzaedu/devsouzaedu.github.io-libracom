@@ -346,6 +346,82 @@ label {
     background-color: #333;
 }
 
+/* Estilos da Galeria */
+.minha-galeria {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 10%;
+}
+
+.slideshow-container {
+    width: 100%; /* Definindo a largura para 100% */
+    display: flex;
+    justify-content: space-between; /* Espaço entre as imagens */
+}
+
+.imagem-container {
+    width: 200%; /* O container deve ser o dobro da largura das imagens para a rolagem */
+    display: flex;
+}
+
+.imagem {
+    flex: 0 0 50%; /* Cada imagem ocupa 50% da largura do container pai */
+    transition: transform 0.5s ease; /* Adiciona transição suave para a movimentação */
+}
+
+.imagem img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilo para a bolinha de navegação */
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: red; /* Alterado para vermelho */
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 2.7s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+
+/* Novo estilo para controlar a transição das imagens */
+.fade-in {
+    animation-name: fade-in;
+    animation-duration: 2.7s;
+}
+
+.fade-out {
+    animation-name: fade-out;
+    animation-duration: 2.7s;
+}
+
+@keyframes fade-in {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes fade-out {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+
+
+
+
 /* Media queries */
 
 /* Desktop */

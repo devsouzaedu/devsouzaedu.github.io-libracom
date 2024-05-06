@@ -37,8 +37,11 @@ function startSlide() {
 }
 
 // Iniciar o slide quando a página carregar
-window.onload = startSlide;
-
+window.onload = function() {
+    iniciarTransicao(); // Chama a função de iniciar transição de imagens
+    startSlide(); // Chama a função de iniciar o slide
+    iniciarCarrossel(); // Chama a função de iniciar o carrossel
+};
 
 $(document).ready(function(){
   $('.produto-slider').slick({
@@ -57,7 +60,6 @@ $(document).ready(function(){
   });
 });
 
-
 // Inicialize o Slick Carousel para os banners
 $(document).ready(function(){
   $('.banner-slide').slick({
@@ -70,7 +72,6 @@ $(document).ready(function(){
     autoplaySpeed: 5000, // Definir a velocidade da reprodução automática (em milissegundos)
   });
 });
-
 
 // JavaScript para mostrar/esconder o botão flutuante ao rolar a página
 $(document).ready(function() {
@@ -89,7 +90,6 @@ $(document).ready(function() {
   });
 });
 
-
 const toggleButtons = document.querySelectorAll('.toggle-btn');
 
 toggleButtons.forEach(button => {
@@ -98,3 +98,28 @@ toggleButtons.forEach(button => {
         answer.classList.toggle('faq-answer-visible');
     });
 });
+
+// Função para iniciar o carrossel da galeria 5
+function iniciarCarrossel() {
+  const imagens = document.querySelectorAll('.imagem');
+  let index = 0;
+  const intervalo = 1800; // Intervalo de tempo entre cada mudança de imagem (em milissegundos)
+
+  function mostrarProximoPar() {
+    // Oculta o par de imagens atual
+    imagens[index].classList.remove('ativo');
+    imagens[index + 1].classList.remove('ativo');
+
+    // Atualiza o índice para mostrar o próximo par de imagens
+    index = (index + 2) % imagens.length;
+
+    // Exibe o próximo par de imagens
+    imagens[index].classList.add('ativo');
+    imagens[index + 1].classList.add('ativo');
+  }
+
+  // Inicia a animação de carrossel
+  mostrarProximoPar(); // Exibe o primeiro par de imagens imediatamente
+
+  setInterval(mostrarProximoPar, intervalo);
+}
