@@ -36,13 +36,6 @@ function startSlide() {
   }, 5000); // Altere o valor (em milissegundos) para ajustar a velocidade do slide
 }
 
-// Iniciar o slide quando a página carregar
-window.onload = function() {
-    iniciarTransicao(); // Chama a função de iniciar transição de imagens
-    startSlide(); // Chama a função de iniciar o slide
-    iniciarCarrossel(); // Chama a função de iniciar o carrossel
-};
-
 $(document).ready(function(){
   $('.produto-slider').slick({
     slidesToShow: 3, // Mostrar 3 slides por vez
@@ -123,3 +116,28 @@ function iniciarCarrossel() {
 
   setInterval(mostrarProximoPar, intervalo);
 }
+
+$(document).ready(function(){
+  $('.gallery').slick({
+    dots: true, // Mostra as bolinhas de navegação
+    autoplay: true, // Ativa o autoplay
+    autoplaySpeed: 2000, // Define a velocidade do autoplay em milissegundos (2 segundos)
+    slidesToShow: 2, // Mostrar duas imagens por vez
+    slidesToScroll: 2, // Rolagem de duas imagens por vez
+    centerMode: true, // Ativa o modo de centralização
+    responsive: [
+      {
+        breakpoint: 768, // Breakpoint para telas menores
+        settings: {
+          slidesToShow: 1, // Mostrar apenas 1 imagem por vez em telas menores
+          slidesToScroll: 1 // Rolagem de 1 imagem por vez em telas menores
+        }
+      }
+    ]
+  });
+});
+
+
+
+
+

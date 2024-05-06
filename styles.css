@@ -346,82 +346,41 @@ label {
     background-color: #333;
 }
 
-/* Estilos da Galeria */
-.minha-galeria {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    margin: 10%;
-}
 
-.slideshow-container {
-    width: 100%; /* Definindo a largura para 100% */
-    display: flex;
-    justify-content: space-between; /* Espaço entre as imagens */
-}
-
-.imagem-container {
-    width: 200%; /* O container deve ser o dobro da largura das imagens para a rolagem */
-    display: flex;
-}
-
-.imagem {
-    flex: 0 0 50%; /* Cada imagem ocupa 50% da largura do container pai */
-    transition: transform 0.5s ease; /* Adiciona transição suave para a movimentação */
-}
-
-.imagem img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* Estilo para a bolinha de navegação */
-.dot {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    background-color: red; /* Alterado para vermelho */
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 2.7s;
-}
-
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
-
-
-/* Novo estilo para controlar a transição das imagens */
-.fade-in {
-    animation-name: fade-in;
-    animation-duration: 2.7s;
-}
-
-.fade-out {
-    animation-name: fade-out;
-    animation-duration: 2.7s;
-}
-
-@keyframes fade-in {
-    from {opacity: 0}
-    to {opacity: 1}
-}
-
-@keyframes fade-out {
-    from {opacity: 1}
-    to {opacity: 0}
-}
-
-
-
-
+/* Estilos para a galeria */
+/* Estilo para os slides */
+.slide {
+    margin: 0 5px; /* Adiciona margem ao redor de cada slide */
+    border-radius: 20px; /* Adiciona cantos arredondados */
+  }
+  
+  /* Estilo para as imagens dentro dos slides */
+  .slide img {
+    width: 100%; /* Garante que a imagem ocupe todo o espaço dentro do slide */
+    border-radius: 20px; /* Adiciona cantos arredondados às imagens */
+  }
+  
+  /* Adiciona margens ao redor do contêiner da galeria */
+  .gallery {
+    margin: 20px auto; /* Margem superior e inferior de 20px e centraliza horizontalmente */
+    width: 80%; /* Define a largura do contêiner */
+  }
+  
+  /* Ajusta a largura dos slides */
+  .slick-slide {
+    width: calc(100% - 10px); /* Largura dos slides (100% - margem entre eles) */
+  }
+  
+  /* Centraliza os slides */
+  .slick-list {
+    overflow: visible; /* Permite que os slides ultrapassem os limites da área de visualização */
+  }
+  
+  /* Define a margem entre os slides */
+  .slick-slide:not(:last-child) {
+    margin-right: 10px; /* Margem entre os slides, exceto para o último slide */
+  }
+  
 /* Media queries */
 
 /* Desktop */
