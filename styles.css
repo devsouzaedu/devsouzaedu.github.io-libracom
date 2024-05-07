@@ -75,6 +75,7 @@ footer {
     display: block; /* Para garantir que as margens laterais funcionem */
 }
 
+
 .stars {
     /* Adicione estilos para exibir as estrelas */
 }
@@ -85,9 +86,13 @@ footer {
 }
 
 .profile img {
-    width: 30%; /* Largura máxima de 90% */
-    height: auto; /* Altura automática para manter a proporção */
-    margin: auto; /* Margem de 5% nas laterais */
+    width: auto;  /* Mantém a largura automática para preservar a proporção */
+    height: auto;  /* Altura automática para manter proporção */
+    max-width: 200px;  /* Largura máxima de 200px */
+    max-height: 200px;  /* Altura máxima de 200px */
+    border-radius: 50%;  /* Torna a imagem circular */
+    display: block;  /* Garante que a imagem é tratada como bloco para centralização */
+    margin: 10px auto;  /* Centraliza a imagem horizontalmente e adiciona espaço acima e abaixo */
 }
 
 .profile span {
@@ -187,8 +192,9 @@ footer p {
 
 /* Estilos para a seção de perguntas e respostas */
 .faq-container {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 600px; /* Largura máxima da seção */
+    margin: 50px auto; /* Espaçamento no topo e entre seções, centralizando na horizontal */
+    padding: 0 30px; /* Adiciona um espaçamento lateral */
 }
 
 .faq-item {
@@ -380,57 +386,63 @@ label {
   .slick-slide:not(:last-child) {
     margin-right: 10px; /* Margem entre os slides, exceto para o último slide */
   }
-  
+
+/* Título da Seção de Depoimentos */
+h2 {
+    width: 100%; /* Faz o título ocupar a largura total da linha */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    color: #333;
+    text-align: center; /* Centraliza o título */
+}
+
+/* Seção de Depoimentos */
+.testimonial-section {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens sejam embalados em múltiplas linhas */
+    justify-content: space-between; /* Espaçamento uniforme */
+    align-items: flex-start; /* Alinha os depoimentos no topo */
+    margin: 20px; /* Margem em torno da seção */
+    padding: 0; /* Sem padding interno que possa afetar */
+}
+
+.testimonial {
+    flex: 1 0 48%; /* Flexibilidade para não crescer, mas ter 48% de largura base */
+    margin-bottom: 20px; /* Espaço abaixo de cada depoimento */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.feedback-image {
+    width: 100%; /* As imagens ocupam toda a largura do depoimento */
+    border-radius: 30px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-content {
+    width: 100%; /* Ocupa toda a largura do depoimento */
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px; /* Espaço antes do próximo conteúdo */
+}
+
+.client-avatar {
+    width: 60px; /* Dimensão reduzida para imagem de perfil */
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: -30px;
+    right: 10px;
+}
+
+
+
 /* Media queries */
 
-/* Desktop */
-@media (min-width: 992px) {
-    .entregas_title {
-        font-size: 28px;
-    }
 
-    .produto-slider {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .card {
-        flex: 0 0 auto;
-        width: 50%;
-        margin-right: 15px;
-        scroll-snap-align: start;
-    }
-
-    .card:last-child {
-        margin-right: 0;
-    }
-
-    .slick-prev,
-    .slick-next {
-        display: none;
-    }
-
-    .carousel-item {
-        display: flex;
-        justify-content: space-between;
-        width: 50%; /* Renderiza dois itens por vez */
-    }
-}
-
-/* Tablet */
-@media (min-width: 768px) {
-    .produto-slider {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        gap: 20px;
-    }
-
-    .produto-slider .card {
-        flex: 0 0 100%;
-        scroll-snap-align: start;
-    }
-}
