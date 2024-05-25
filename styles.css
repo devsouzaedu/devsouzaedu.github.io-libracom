@@ -441,6 +441,46 @@ h2 {
     right: 10px;
 }
 
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.banner h2 {
+    margin-bottom: 20px;
+}
+
+.marcas {
+    width: 80%;
+}
+
+.marcas img {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.marcas img:hover {
+    transform: scale(1.1);
+}
+
+.slick-slide {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .marcas img {
+        width: 80px;
+    }
+}
+ 
 
 
 /* Media queries */
