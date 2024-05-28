@@ -1,8 +1,10 @@
-// JavaScript para o menu fixo ao rolar a página
+// Correção para fixar o menu ao rolar a página
 window.onscroll = function() { fixarMenu() };
 
 var navbar = document.querySelector('.navbar');
-var sticky = navbar.offsetTop;
+if (navbar) {
+  var sticky = navbar.offsetTop;
+}
 
 function fixarMenu() {
   if (window.pageYOffset >= sticky) {
@@ -12,7 +14,7 @@ function fixarMenu() {
   }
 }
 
-// JavaScript para animação suave ao clicar nos links do menu
+// Correção para animação suave ao clicar nos links do menu
 $(document).ready(function() {
   $('a[href^="#"]').on('click', function(event) {
     var target = $(this.getAttribute('href'));
@@ -25,15 +27,18 @@ $(document).ready(function() {
   });
 });
 
-// Função para controlar o slide
+// Correção para função de slide de banners
 function startSlide() {
   var slideIndex = 0;
   var banners = document.querySelectorAll('.banner');
-  setInterval(function() {
-    banners[slideIndex].style.display = 'none';
-    slideIndex = (slideIndex + 1) % banners.length;
-    banners[slideIndex].style.display = 'block';
-  }, 5000); // Altere o valor (em milissegundos) para ajustar a velocidade do slide
+  if (banners.length > 0) {
+    banners[0].style.display = 'block'; // Mostrar o primeiro banner inicialmente
+    setInterval(function() {
+      banners[slideIndex].style.display = 'none';
+      slideIndex = (slideIndex + 1) % banners.length;
+      banners[slideIndex].style.display = 'block';
+    }, 5000); // Altere o valor (em milissegundos) para ajustar a velocidade do slide
+  }
 }
 
 $(document).ready(function(){
@@ -66,7 +71,7 @@ $(document).ready(function(){
   });
 });
 
-// JavaScript para mostrar/esconder o botão flutuante ao rolar a página
+// Correção para mostrar/esconder o botão flutuante ao rolar a página
 $(document).ready(function() {
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
@@ -83,16 +88,19 @@ $(document).ready(function() {
   });
 });
 
+// Correção para botão de alternar FAQ
 const toggleButtons = document.querySelectorAll('.toggle-btn');
 
 toggleButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const answer = button.parentElement.nextElementSibling;
-        answer.classList.toggle('faq-answer-visible');
-    });
+  button.addEventListener('click', () => {
+    const answer = button.parentElement.nextElementSibling;
+    if (answer) {
+      answer.classList.toggle('faq-answer-visible');
+    }
+  });
 });
 
-// Função para iniciar o carrossel da galeria 5
+// Correção para iniciar o carrossel da galeria 5
 function iniciarCarrossel() {
   const imagens = document.querySelectorAll('.imagem');
   let index = 0;
@@ -112,9 +120,10 @@ function iniciarCarrossel() {
   }
 
   // Inicia a animação de carrossel
-  mostrarProximoPar(); // Exibe o primeiro par de imagens imediatamente
-
-  setInterval(mostrarProximoPar, intervalo);
+  if (imagens.length > 1) {
+    mostrarProximoPar(); // Exibe o primeiro par de imagens imediatamente
+    setInterval(mostrarProximoPar, intervalo);
+  }
 }
 
 $(document).ready(function(){
@@ -137,7 +146,6 @@ $(document).ready(function(){
   });
 });
 
-
 $(document).ready(function(){
   $('#feedback-slider').slick({
     infinite: true,
@@ -150,32 +158,35 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-  $('.slider').slick({
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      dots: false,
-      arrows: false,
-      responsive: [
-          {
-              breakpoint: 768,
-              settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 1
-              }
-          },
-          {
-              breakpoint: 480,
-              settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1
-              }
-          }
-      ]
+  $('#marcasContainer').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    dots: false,
+    arrows: false,
+    centerMode: true, // Adiciona o modo centralizado
+    centerPadding: '0px', // Ajusta o preenchimento central
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: '0px'
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: '0px'
+        }
+      }
+    ]
   });
 });
-
-
-

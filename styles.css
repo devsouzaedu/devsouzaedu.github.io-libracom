@@ -441,23 +441,21 @@ h2 {
     right: 10px;
 }
 
-.banner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background-color: #f5f5f5;
-    text-align: center;
-    font-family: Arial, sans-serif;
-}
-
-.banner h2 {
-    margin-bottom: 20px;
-}
-
+/* Estilo para o contêiner de marcas */
 .marcas {
-    width: 80%;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente o contêiner de marcas */
+    align-items: center; /* Centraliza verticalmente o contêiner de marcas */
+    width: 100%; /* Garante que ocupe toda a largura disponível */
+    max-width: 1200px; /* Define um tamanho máximo */
+    margin: 0 auto; /* Centraliza o contêiner */
+}
+
+.marcas div {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente as imagens dentro de cada div */
+    align-items: center; /* Centraliza verticalmente as imagens dentro de cada div */
+    width: 100%;
 }
 
 .marcas img {
@@ -470,16 +468,16 @@ h2 {
     transform: scale(1.1);
 }
 
-.slick-slide {
-    display: flex;
-    justify-content: center;
-}
-
 @media (max-width: 600px) {
     .marcas img {
         width: 80px;
     }
 }
+
+
+
+
+
  
 
 
