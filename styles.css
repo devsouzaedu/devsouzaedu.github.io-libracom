@@ -154,15 +154,15 @@ footer {
 .content button {
     padding: 10px 20px; /* Espaçamento interno */
     font-size: 16px; /* Tamanho da fonte */
-    background-color: #d3d3d3; /* Cor cinza gelo */
-    color: #000; /* Cor do texto */
+    background-color: #25D366; /* Cor verde WhatsApp */
+    color: #fff; /* Cor do texto */
     border: none; /* Removendo borda */
     cursor: pointer; /* Cursor ao passar por cima */
     border-radius: 20px; /* Cantos arredondados */
 }
 
 .content button:hover {
-    background-color: #b0b0b0; /* Altera a cor ao passar o mouse */
+    background-color: #1ebd5b; /* Altera a cor ao passar o mouse */
 }
 
 .div1text {
@@ -442,6 +442,7 @@ h2 {
 }
 
 /* Estilo para o contêiner de marcas */
+/* Estilo para o contêiner de marcas */
 .marcas {
     display: flex;
     justify-content: center; /* Centraliza horizontalmente o contêiner de marcas */
@@ -449,6 +450,7 @@ h2 {
     width: 100%; /* Garante que ocupe toda a largura disponível */
     max-width: 1200px; /* Define um tamanho máximo */
     margin: 0 auto; /* Centraliza o contêiner */
+    padding: 0 10px; /* Adiciona padding para garantir centralização */
 }
 
 .marcas div {
@@ -473,6 +475,7 @@ h2 {
         width: 80px;
     }
 }
+
 
 
 

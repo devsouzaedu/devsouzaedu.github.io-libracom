@@ -157,36 +157,42 @@ $(document).ready(function(){
   });
 });
 
-$(document).ready(function(){
-  $('#marcasContainer').slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    dots: false,
-    arrows: false,
-    centerMode: true, // Adiciona o modo centralizado
-    centerPadding: '0px', // Ajusta o preenchimento central
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: '0px'
+$(document).ready(function() {
+  var $marcasContainer = $('#marcasContainer');
+  if ($marcasContainer.length) {
+    $marcasContainer.slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: false,
+      arrows: false,
+      centerMode: true,
+      centerPadding: '10px',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '10px'
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '10px'
+          }
         }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: '0px'
-        }
-      }
-    ]
-  });
+      ]
+    });
+  } else {
+    console.log("Elemento #marcasContainer não encontrado no DOM.");
+  }
 });
+
