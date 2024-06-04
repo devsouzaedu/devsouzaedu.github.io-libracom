@@ -106,6 +106,7 @@ footer {
     text-align: center;
 }
 
+
 .content img {
     width: 200px; /* Largura da imagem */
     height: auto; /* Altura automática para manter a proporção */
@@ -152,8 +153,8 @@ footer p {
 
 /* Estilos para a seção de perguntas e respostas */
 .faq-container {
-    max-width: 600px; /* Largura máxima da seção */
-    margin: 50px auto; /* Espaçamento no topo e entre seções, centralizando na horizontal */
+    max-width: auto; /* Largura máxima da seção */
+    margin: 5% 5%; /* Espaçamento no topo e entre seções, centralizando na horizontal */
     padding: 0 30px; /* Adiciona um espaçamento lateral */
 }
 
@@ -161,8 +162,13 @@ footer p {
     margin-bottom: 20px; /* Espaçamento entre as perguntas e respostas */
     border-radius: 10px; /* Cantos arredondados */
     overflow: hidden; /* Garante que o conteúdo dentro das perguntas e respostas não ultrapasse os cantos arredondados */
-    border: 1px solid #ccc; /* Adiciona uma borda para destacar as perguntas e respostas */
+    border: 1px solid #000000; /* Adiciona uma borda para destacar as perguntas e respostas */
 }
+
+.faq-item li {
+    font-size: medium;
+}
+
 
 .faq-question {
     cursor: pointer;
@@ -185,15 +191,22 @@ footer p {
     display: block;
 }
 
-/* Estilos para o formulário de contato */
+/* Estilo para a seção de contato */
+.contact-section  {
+    background-color: #333333; /* Cor de fundo cinza chumbo */
+    padding: 20px;
+    border-radius: 10px; /* Cantos arredondados para a seção */
+}
+
+
+/* Mantém o estilo do formulário */
 .contact-form-container {
-    max-width: 500px; /* Define a largura máxima do formulário */
-    margin: 0 auto; /* Centraliza o formulário horizontalmente */
+    background-color: #000000; /* Cor de fundo preta */
     padding: 20px; /* Espaçamento interno */
     border-radius: 10px; /* Cantos arredondados */
-    background-color: #000000; /* Cor de fundo do formulário */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave para efeito de elevação */
 }
+
 
 .form-group {
     margin-bottom: 20px; /* Espaçamento entre os campos */
@@ -217,10 +230,10 @@ label {
 }
 
 .contact-title {
-    background-color: #ffffff;
+    background-color: #333333;
     text-align: center; /* Centraliza o texto horizontalmente */
     margin-bottom: 30px; /* Espaçamento inferior */
-    color: #000000; /* Cor do texto branca para o título */
+    color: #ffffff; /* Cor do texto branca para o título */
     font-family: 'SF_PRO_TEXT', sans-serif; /* Fonte do texto */
     font-size: 24px; /* Tamanho do texto */
 }
@@ -252,16 +265,19 @@ label {
 .gallery-section {
     text-align: center;
     padding: 50px 20px;
+    background-color: #333333; /* Fundo cinza claro */
 }
 
 .gallery-section h2 {
     font-size: 24px;
     margin-bottom: 20px;
+    color: white;
 }
 
 .gallery-section p {
     font-size: 16px;
     margin-bottom: 30px;
+    color: white;
 }
 
 .image-gallery {
