@@ -62,50 +62,10 @@ footer {
 }
 
 /* Estilo para o slider de feedback */
-.carousel-inner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.carousel-item img {
-    width: 70%; /* Largura da imagem */
-    height: auto; /* Altura automática para manter a proporção */
-    margin: 0 15%; /* Margens laterais de 15% */
-    display: block; /* Para garantir que as margens laterais funcionem */
-}
-
-
-.stars {
-    /* Adicione estilos para exibir as estrelas */
-}
 
 .feedback-text {
     margin-top: 20px;
     font-size: 18px;
-}
-
-.profile img {
-    width: auto;  /* Mantém a largura automática para preservar a proporção */
-    height: auto;  /* Altura automática para manter proporção */
-    max-width: 200px;  /* Largura máxima de 200px */
-    max-height: 200px;  /* Altura máxima de 200px */
-    border-radius: 50%;  /* Torna a imagem circular */
-    display: block;  /* Garante que a imagem é tratada como bloco para centralização */
-    margin: 10px auto;  /* Centraliza a imagem horizontalmente e adiciona espaço acima e abaixo */
-}
-
-.profile span {
-    font-weight: bold;
-}
-
-.stars {
-    margin-top: 10px;
-}
-
-.star {
-    font-size: 24px;
-    color: #ffc107; /* Cor amarela para as estrelas preenchidas */
 }
 
 /* Estilos para o vídeo de fundo */
@@ -265,16 +225,6 @@ label {
     font-size: 24px; /* Tamanho do texto */
 }
 
-/* Estilos para o contêiner de banners */
-.banner-container {
-    text-align: center; /* Centralizar horizontalmente o conteúdo */
-    margin-top: 30px; /* Espaçamento superior para separar do conteúdo acima */
-}
-
-/* Estilo para os slides de banner */
-.banner-slide {
-    display: inline-block; /* Permitir que os slides sejam alinhados em linha */
-}
 
 /* Estilo para o botão do WhatsApp */
 .whatsapp-button {
@@ -372,20 +322,6 @@ label {
     width: 80%; /* Define a largura do contêiner */
   }
   
-  /* Ajusta a largura dos slides */
-  .slick-slide {
-    width: calc(100% - 10px); /* Largura dos slides (100% - margem entre eles) */
-  }
-  
-  /* Centraliza os slides */
-  .slick-list {
-    overflow: visible; /* Permite que os slides ultrapassem os limites da área de visualização */
-  }
-  
-  /* Define a margem entre os slides */
-  .slick-slide:not(:last-child) {
-    margin-right: 10px; /* Margem entre os slides, exceto para o último slide */
-  }
 
 /* Título da Seção de Depoimentos */
 h2 {
@@ -441,47 +377,34 @@ h2 {
     right: 10px;
 }
 
-/* Estilo para o contêiner de marcas */
-/* Estilo para o contêiner de marcas */
-.marcas {
+/* Seção de Marcas Confiáveis */
+.trusted-brands {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.carousel {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.carousel .slick-slide {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente o contêiner de marcas */
-    align-items: center; /* Centraliza verticalmente o contêiner de marcas */
-    width: 100%; /* Garante que ocupe toda a largura disponível */
-    max-width: 1200px; /* Define um tamanho máximo */
-    margin: 0 auto; /* Centraliza o contêiner */
-    padding: 0 10px; /* Adiciona padding para garantir centralização */
+    justify-content: center;
+    align-items: center;
 }
 
-.marcas div {
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente as imagens dentro de cada div */
-    align-items: center; /* Centraliza verticalmente as imagens dentro de cada div */
-    width: 100%;
+.carousel img {
+    display: block;
+    margin: 0 auto;
 }
 
-.marcas img {
-    width: 100px;
-    height: auto;
-    transition: transform 0.3s;
-}
-
-.marcas img:hover {
-    transform: scale(1.1);
-}
-
-@media (max-width: 600px) {
-    .marcas img {
-        width: 80px;
-    }
+.trustimgs {
+    max-width: 100px;
 }
 
 
 
-
-
-
- 
 
 
 /* Media queries */

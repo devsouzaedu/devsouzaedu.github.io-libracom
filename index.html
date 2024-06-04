@@ -93,16 +93,18 @@
     </div>
   </div>
 
-  <!-- Seção de Marcas -->
-  <div class="banner">
-    <h2>Essas marcas confiaram na gente</h2>
-    <div class="marcas slider" id="marcasContainer">
-      <div><img src="images/marca1.png" alt="Marca 1"></div>
-      <div><img src="images/marca2.png" alt="Marca 2"></div>
-      <div><img src="images/marca3.png" alt="Marca 3"></div>
-      <!-- Adicione mais imagens conforme necessário -->
+  <section class="trusted-brands">
+    <h2>Essas marcas confiam na gente</h2>
+    <div class="carousel">
+        <div><img class="trustimgs" src="images/marca1.png" alt="Marca 1"></div>
+        <div><img class="trustimgs" src="images/marca2.png" alt="Marca 2"></div>
+        <div><img class="trustimgs" src="images/marca3.png" alt="Marca 3"></div>
+        <div><img class="trustimgs" src="images/marca4.png" alt="Marca 4"></div>
+        <!-- Adicione mais slides conforme necessário -->
     </div>
-  </div>
+</section>
+
+
 
     <!-- Feedback slide -->
     <section class="testimonial-section">
@@ -293,34 +295,6 @@
       }).catch(function (error) {
         // Tratamento de erro ao reproduzir o vídeo
         console.log('Erro ao reproduzir o vídeo:', error);
-      });
-    });
-
-    $(document).ready(function(){
-      $('#marcasContainer').slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        dots: false,
-        arrows: false,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
       });
     });
   </script>
