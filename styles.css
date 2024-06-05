@@ -61,6 +61,10 @@ footer {
     padding: 20px 0;
 }
 
+.googlelabel {
+    max-width: 200px;
+}
+
 /* Estilo para o slider de feedback */
 
 .feedback-text {
