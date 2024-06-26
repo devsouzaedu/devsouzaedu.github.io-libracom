@@ -86,6 +86,23 @@ $(document).ready(function(){
   });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  var video = document.getElementById('video-bg');
+  var fallback = document.getElementById('video-fallback');
+
+  video.addEventListener('canplay', function () {
+    video.classList.add('loaded');
+    fallback.style.display = 'none';
+  });
+
+  video.play().then(function () {
+    // Vídeo reproduzido com sucesso
+  }).catch(function (error) {
+    // Tratamento de erro ao reproduzir o vídeo
+    console.log('Erro ao reproduzir o vídeo:', error);
+  });
+});
+
 
 
 
