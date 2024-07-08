@@ -262,28 +262,21 @@
     <button class="request-quote-btn">Solicitar orçamento</button>
   </a>
   <!-- Contato -->
-  <div id="contato" class="row mt-5 contact-section">
-    <div class="col-lg-12 contact-texts">
-      <h2 class="contact-title">Entre em Contato</h2>
-      <div class="contact-form-container">
-        <form id="contact-form" action="submit_contact_form.php" method="post">
-          <div class="form-group">
-            <label for="name">Nome do Cliente:</label>
-            <input type="text" class="form-control" id="name" name="name" required>
-          </div>
-          <div class="form-group">
-            <label for="company">Nome da Empresa:</label>
-            <input type="text" class="form-control" id="company" name="company" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Mensagem:</label>
-            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-      </div>
-    </div>
-  </div>
+  <h2>Entre em contato!</h2>
+  <form action="https://formspree.io/f/mldrekgd" method="POST" class="contact-form">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required>
+  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+  
+      <label for="message">Mensagem:</label>
+      <textarea id="message" name="message" required></textarea>
+  
+      <button type="submit">Enviar</button>
+  </form>
+  
+
 
   <a href="#contato" class="btn btn-primary">Ir para Contato</a>
 
