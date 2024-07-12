@@ -114,6 +114,8 @@ footer {
     left: 50%; /* Alinhamento horizontal ao centro */
     transform: translate(-50%, -50%); /* Centralização */
     text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .content img {
