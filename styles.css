@@ -107,16 +107,26 @@ footer {
     z-index: 2; /* Garantir que a sobreposição esteja acima da imagem de fallback */
 }
 
+/* Centralizar o texto na classe .content */
+/* Ajustar a margem do conteúdo */
 .content {
-    position: relative;
-    z-index: 3; /* Garantir que o conteúdo sobreposto esteja acima da sobreposição */
-    top: 50%; /* Alinhamento vertical ao centro */
-    left: 50%; /* Alinhamento horizontal ao centro */
-    transform: translate(-50%, -50%); /* Centralização */
+    position: absolute; /* Garantir que esteja posicionado corretamente */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Colocar o texto acima da overlay */
     text-align: center;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: 0 2%; /* Reduzir a margem lateral */
+    padding: 5px; /* Reduzir o espaçamento interno */
+    max-width: 96%; /* Aumentar a largura máxima para evitar quebras de linha excessivas */
+    font-size: 2rem; /* Ajustar o tamanho da fonte conforme necessário */
+    line-height: 1.2; /* Ajustar a altura da linha para melhorar a legibilidade */
 }
+
+
+
+
+
 
 .content img {
     width: 200px; /* Largura da imagem */
