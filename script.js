@@ -81,7 +81,7 @@ $(document).ready(function(){
       slidesToShow: 2,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 1200,
+      autoplaySpeed: 3200,
       dots: false,
   });
 });

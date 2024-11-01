@@ -541,6 +541,12 @@ h2 {
     box-sizing: border-box;
 }
 
+.carousel img {
+    width: 70%; /* Reduzindo a largura para 70% */
+    height: auto; /* Mantendo a proporção */
+    margin: 0 auto; /* Centraliza as imagens no container */
+}
+
 
 
 /* Media queries */
