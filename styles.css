@@ -472,6 +472,75 @@ h2 {
     height: 100%; /* Se precisar ocupar toda a altura */
 }
 
+/* Estilos para o botão flutuante e a janela de chat */
+#chatButton {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Botão no lado esquerdo */
+    background-color: #007bff; /* Cor azul do botão */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#chatContainer {
+    position: fixed;
+    bottom: 80px;
+    left: 20px; /* Janela de chat no lado esquerdo */
+    width: 300px;
+    max-width: 90%;
+    background-color: #f8f9fa; /* Fundo claro para o container do chat */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    display: none;
+    flex-direction: column;
+}
+
+#chatHeader {
+    background-color: #28a745; /* Cabeçalho do chat em verde */
+    color: white;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+#chatBox {
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.message {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.user {
+    background-color: #e0e0e0; /* Mensagem do usuário */
+    text-align: right;
+}
+
+.bot {
+    background-color: #28a745; /* Mensagens do bot em verde */
+    color: white;
+    text-align: left;
+}
+
+#userInput {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-radius: 0 0 8px 8px;
+    box-sizing: border-box;
+}
+
 
 
 /* Media queries */

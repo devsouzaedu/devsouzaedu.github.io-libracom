@@ -103,12 +103,62 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// Função para alternar a visibilidade da janela de chat
+function toggleChat() {
+  const chatContainer = document.getElementById("chatContainer");
+  chatContainer.style.display = chatContainer.style.display === "none" ? "flex" : "none";
+}
 
+// Função para gerar a resposta do bot
+function generateBotResponse(message) {
+  const lowerCaseMessage = message.toLowerCase();
 
+  // Respostas para saudações
+  if (lowerCaseMessage.includes("boa tarde")) {
+    return "Boa tarde! Como posso ajudar você com nossos wind-banners hoje?";
+  } else if (lowerCaseMessage.includes("olá") || lowerCaseMessage.includes("oi")) {
+    return "Olá! Como posso ajudar você com nossos wind-banners hoje?";
+  } else if (lowerCaseMessage.includes("tamanho") || lowerCaseMessage.includes("dimensões")) {
+    return "Oferecemos os wind-banners nos tamanhos de 2m, 2,60m e 3,20m. Qual deles você gostaria?";
+  } else if (lowerCaseMessage.includes("modelo")) {
+    return "Temos os modelos FACA, PENA, GOTA e VELA. Gostaria de mais informações sobre algum modelo específico?";
+  } else if (lowerCaseMessage.includes("comprar") || lowerCaseMessage.includes("preço") || lowerCaseMessage.includes("valor")) {
+    return "Ok, clique aqui e converse com um vendedor especialista: <a href='https://wa.me/message/AA7NQ43YVMGIN1' target='_blank'>Falar com um especialista</a>";
+  } else if (lowerCaseMessage.includes("ajuda")) {
+    return "Claro! Em que área você precisa de ajuda com nossos wind-banners?";
+  } else {
+    return "Desculpe, não entendi sua pergunta. Posso ajudar com informações sobre tamanhos, modelos ou compras de wind-banners?";
+  }
+}
 
+// Função para enviar a mensagem do usuário e obter a resposta do bot
+function sendMessage() {
+  const userInput = document.getElementById("userInput");
+  const message = userInput.value;
 
+  if (message.trim() !== "") {
+    displayMessage("user", message);
 
+    const botResponse = generateBotResponse(message);
+    displayMessage("bot", botResponse);
 
+    userInput.value = "";
+  }
+}
 
+// Função para exibir uma mensagem no chat
+function displayMessage(sender, message) {
+  const chatBox = document.getElementById("chatBox");
+  const messageElement = document.createElement("div");
+  messageElement.classList.add("message", sender);
+  messageElement.innerHTML = message; // Alterado para innerHTML para permitir links
+  chatBox.appendChild(messageElement);
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
 
-
+// Evento para enviar a mensagem quando pressionar Enter
+document.getElementById("userInput").addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    sendMessage();
+  }
+});

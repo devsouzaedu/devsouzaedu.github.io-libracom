@@ -294,6 +294,32 @@
     <a href="#contato" class="btn btn-primary">Ir para Contato</a>
 </div>
 
+<!-- Chatbot de vendas-->
+ <!-- Chatbot HTML -->
+<div id="chatbot">
+  <div id="chat-header">
+    <h5>Atendimento</h5>
+    <button id="close-chat">x</button>
+  </div>
+  <div id="chat-content">
+    <div id="messages">
+      <div class="message bot-message">Olá! Como posso ajudar você hoje?</div>
+    </div>
+    <input type="text" id="user-input" placeholder="Digite sua mensagem..." />
+    <button id="send-btn">Enviar</button>
+  </div>
+</div>
+
+<!-- Botão de chat flutuante -->
+<div id="chatButton" onclick="toggleChat()">Chat</div>
+
+<!-- Contêiner da janela de chat -->
+<div id="chatContainer">
+  <div id="chatHeader">Suporte de Wind-Banners</div>
+  <div id="chatBox"></div>
+  <input type="text" id="userInput" placeholder="Digite sua mensagem...">
+</div>
+
 <!-- Footer -->
 <footer class="bg-dark">
   <div class="container">
@@ -347,6 +373,6 @@
 </body>
 </html>
 
-  <!-- Versão 18.04 Desenvolvido por JOSÉ EDUARDO MESSIAS SOUZA-->
+  <!-- Versão 19.00 Desenvolvido por JOSÉ EDUARDO MESSIAS SOUZA-->
   <!-- Ou você chegou aqui por quer copiar o site ou por que quer entender como meus négocios funcionam-->
   <!-- Entre em contato comigo via whatsapp, 11 95499-7799 -->
