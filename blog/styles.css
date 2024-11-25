@@ -17,8 +17,13 @@ body {
 }
 
 .container-fluid {
-    padding: 20px;
+    padding: 20px 
 }
+
+main.container {
+    margin-top: 80px; /* Ajuste o valor com base na altura do navbar */
+}
+
 
 .entregas_title {
     color: #ffffff;
