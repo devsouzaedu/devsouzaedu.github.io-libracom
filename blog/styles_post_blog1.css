@@ -95,13 +95,6 @@ article figcaption {
     margin-top: 5px;
 }
 
-/* Rodapé do artigo */
-article footer {
-    margin-top: 30px;
-    font-size: 0.9rem;
-    color: #fffefe!important;
-    text-align: center;
-}
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -118,24 +111,45 @@ article footer {
     }
 }
 
-/* Estilo para o rodapé */
-footer {
-    background-color: #000000!important;
-    color: #000000;
-    text-align: center;
-    padding: 20px 0;
+/* Garantir que a imagem fique centralizada e responsiva */
+figure.text-center {
+    margin: 0 auto;  /* Centraliza a figura no contêiner */
+    padding: 15px;   /* Adiciona um pouco de espaço ao redor da imagem */
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner */
+    display: block;  /* Torna a figura um elemento de bloco, permitindo a centralização */
 }
 
-footer {
-    color: #fff;
-    padding: 40px 0;
+figure.text-center img {
+    width: 100%;      /* Faz a imagem ocupar 100% da largura disponível */
+    max-width: 800px; /* Limita o tamanho máximo da imagem para 800px */
+    height: auto;     /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Mantém o efeito de borda arredondada */
 }
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    figure.text-center {
+        padding: 10px; /* Menos padding em telas menores */
+    }
+}
+
+
+/* Rodapé do artigo */
+/* Rodapé do artigo */
+footer {
+    background-color: #000000 !important;  /* Fundo preto puro */
+    color: #fff !important;  /* Texto branco */
+    text-align: center !important;
+    padding: 40px 0 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra para destaque */
+}
+
 
 footer h4 {
-    font-size: 18px;
+    font-size: 18px !important;
 }
 
 footer p {
-    margin-top: 20px;
-    font-size: 14px;
+    margin-top: 20px !important;
+    font-size: 14px !important;
 }
