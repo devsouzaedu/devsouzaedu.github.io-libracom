@@ -469,6 +469,23 @@ h2 {
 }
 
 
+article {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+article img {
+    margin-right: 15px;
+    max-width: 200px;
+    height: auto;
+}
+
+article h2 {
+    flex-grow: 1;
+}
+
+
 
 
 

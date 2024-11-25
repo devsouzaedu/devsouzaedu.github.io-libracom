@@ -93,3 +93,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
   
+
+
+
+
+// Função para gerar a prévia do post
+function gerarPrevia(idDoPost, tamanhoPrevia) {
+  // Pegue o conteúdo do post
+  const postContent = document.querySelector(`#${idDoPost}`).innerText;
+  
+  // Divida o conteúdo em palavras
+  const palavras = postContent.split(' ');
+
+  // Limite o número de palavras (tamanhoPrevia)
+  const previewWords = palavras.slice(0, tamanhoPrevia).join(' ');
+
+  // Exiba a prévia em um elemento da homepage
+  const previewElement = document.querySelector(`#preview-${idDoPost}`);
+  previewElement.innerText = previewWords + '...';
+}
+
+// Chame a função na página inicial
+document.addEventListener('DOMContentLoaded', () => {
+  // Adapte o ID do post e o tamanho da prévia que você deseja (ex: 30 palavras)
+  gerarPrevia('preview-post-content', 1000);
+});
+
+
+
